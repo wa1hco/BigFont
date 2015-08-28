@@ -37,6 +37,7 @@ class BigFont {
     void loadchars(LiquidCrystal& lcd);  
 
     // print char method
+    void printblankchar(LiquidCrystal& lcd, byte col, byte row);
     void printbigchar(LiquidCrystal& lcd, byte digit, byte col, byte row, byte symbol); 
 
     int version(void);

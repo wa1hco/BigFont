@@ -133,6 +133,19 @@ void BigFont::loadchars(LiquidCrystal& lcd)
   lcd.createChar(7, custchar[7]);  
 }
 
+// print blank character
+void BigFont::printblankchar(LiquidCrystal& lcd, byte col, byte row)
+{
+   for(int i = 0; i < 4; i++) // for each row
+   {
+      lcd.setCursor(col, row + i);
+      for(int j = 0; j < 4; j++) // for each column
+      {
+        lcd.write(254);  // blank char
+      } // for(i...
+   } // for(j...
+} // printblankchar()
+
 // digit 0-9; col, row in LCD character, symbol
 void BigFont::printbigchar(LiquidCrystal& lcd, byte digit, byte col, byte row, byte symbol) 
 {
@@ -153,7 +166,6 @@ void BigFont::printbigchar(LiquidCrystal& lcd, byte digit, byte col, byte row, b
     lcd.setCursor(col + 4, row + 0);
     lcd.write(7); // deg symbol
   }
-  lcd.setCursor(col + 4, row);  
 }
 
 // version() returns the version of the library:
