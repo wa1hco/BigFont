@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-BigFont	KEYWORD1	BigFont
+BigFont	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
